@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 // import { fetchFruits } from '../actions'
 import Tasks from './Tasks'
+import Task from './Task'
 
 function App() {
   // const fruits = useSelector((state) => state.fruits)
@@ -21,6 +22,7 @@ function App() {
           ))} */}
         {/* </ul> */}
         <Tasks />
+        <Task />
       </div>
     </>
   )

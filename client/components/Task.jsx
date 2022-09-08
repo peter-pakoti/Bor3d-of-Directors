@@ -7,10 +7,10 @@ function Task() {
   // const task = props.name
   const dispatch = useDispatch()
 
-  console.log(fetchTasks())
   return (
     <div>
-      <div>{dispatch(fetchTasks())}</div>
+      {/* <div>{task}</div> */}
+      <button onClick={() => dispatch(fetchTasks())}>Tasks</button>
     </div>
   )
 }
