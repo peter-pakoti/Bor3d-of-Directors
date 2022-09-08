@@ -8,8 +8,8 @@ function App() {
   return (
     <>
       <div className="app">
-        <h1>Bor3d of Directors</h1>
-        <h3>Activity</h3>
+        <h1 className="title">Bor3d of Directors</h1>
+        <h3 className="activity">Activity</h3>
 
         <ShowActivity />
         <Tasks />
