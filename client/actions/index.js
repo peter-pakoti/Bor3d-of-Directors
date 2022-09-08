@@ -1,18 +1,28 @@
-import { getFruits } from '../apis/fruits'
+import { getActivity } from '../apis/activity'
 
-export const SET_FRUITS = 'SET_FRUITS'
+export const SET_ACTIVITY = 'SET_ACTIVITY'
+export const FETCH_ACTIVITY_FAILED = 'FETCH_ACTIVITY_FAILED'
 
-export function setFruits(fruits) {
+export function setActivity(activity) {
   return {
-    type: SET_FRUITS,
-    payload: fruits,
+    type: SET_ACTIVITY,
+    payload: activity,
   }
 }
 
-export function fetchFruits() {
+export function fetchActivityFailed(message) {
+  return {
+    type: FETCH_ACTIVITY_FAILED,
+    payload: message,
+  }
+}
+
+export function fetchActivity() {
   return (dispatch) => {
-    return getFruits().then((fruits) => {
-      dispatch(setFruits(fruits))
+    return getActivity().then((activity) => {
+      dispatch(setActivity(activity))
+    }).catch((e) => {
+      dispatch(fetchActivityFailed(e.message || 'Server Error'))
     })
   }
 }
