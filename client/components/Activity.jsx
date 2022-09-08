@@ -6,7 +6,11 @@ import { useDispatch } from 'react-redux'
 function ShowActivity() {
   const dispatch = useDispatch()
 
-  return <div></div>
+  return (
+    <div>
+      <button>Click Me</button>
+    </div>
+  )
 }
 
 export default ShowActivity
