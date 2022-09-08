@@ -1,6 +1,5 @@
-import request from 'superagent'
-
 import { getTasks } from '../apis/tasks'
+import { getRandomTask } from '../helpers'
 
 export const REQUEST_TASKS = 'REQUEST_TASKS'
 export const RECEIVE_TASKS = 'RECEIVE_TASKS'
@@ -46,7 +45,7 @@ export function updateOldTask(oldTask, newTask) {
 export function fetchTasks() {
   return (dispatch) => {
     dispatch(requestTasks())
-    return request.get(getTasks()).then((tasks) => {
+    return getTasks().then((tasks) => {
       console.log(tasks)
       dispatch(receiveTasks(tasks))
       return null
