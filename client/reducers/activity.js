@@ -1,6 +1,6 @@
 import { SET_ACTIVITY } from '../actions'
 
-const initialState = []
+const initialState = null
 
 const reducer = (state = initialState, action) => {
   const { type, payload } = action

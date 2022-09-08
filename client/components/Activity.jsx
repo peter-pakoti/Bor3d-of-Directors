@@ -1,14 +1,17 @@
 import React from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
 // need to import a fetchActivity function
+import { fetchActivity } from '../actions'
 
 function ShowActivity() {
+  const activity = useSelector((state) => state.activity)
   const dispatch = useDispatch()
 
   return (
     <div>
-      <button>Click Me</button>
+      <button onClick={() => dispatch(fetchActivity())}>Click Me</button>
+      {activity && <p>{activity.activity}</p>}
     </div>
   )
 }
