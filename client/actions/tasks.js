@@ -3,9 +3,9 @@ import { getRandomTask } from '../helpers'
 
 export const REQUEST_TASKS = 'REQUEST_TASKS'
 export const RECEIVE_TASKS = 'RECEIVE_TASKS'
-export const ADD_TASK = 'ADD_WOMBAT'
-export const DEL_TASK = 'DEL_WOMBAT'
-export const UPDATE_TASK = 'UPDATE_WOMBAT'
+export const ADD_TASK = 'ADD_TASK'
+export const DEL_TASK = 'DEL_TASK'
+export const UPDATE_TASK = 'UPDATE_TASK'
 
 export function requestTasks() {
   return {
@@ -32,11 +32,10 @@ export function deleteOldTask(task) {
   }
 }
 
-export function updateOldTask(oldTask, newTask) {
+export function updateOldTask(newTask) {
   return {
     type: 'UPDATE_TASK',
     payload: {
-      oldTask,
       newTask,
     },
   }
