@@ -13,11 +13,14 @@ function App() {
   return (
     <>
       <div className="app">
-        <h1>Fullstack Boilerplate - with Fruits!</h1>
+        <h1>Bor3d of Directors</h1>
+        <h3>Activity</h3>
+
+        <button>Click for your fun activity:</button>
         <ul>
-          {fruits.map((fruit) => (
+          {/* {fruits.map((fruit) => (
             <li key={fruit}>{fruit}</li>
-          ))}
+          ))} */}
         </ul>
       </div>
     </>
