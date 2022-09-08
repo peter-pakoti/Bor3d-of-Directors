@@ -1,8 +1,9 @@
 import { combineReducers } from 'redux'
 
-// import fruits from './fruits'
 import tasks from './tasks'
+import activity from './activity'
+
 export default combineReducers({
-  // fruits,
+  activity,
   tasks,
 })
