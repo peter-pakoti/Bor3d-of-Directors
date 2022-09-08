@@ -19,10 +19,12 @@ export function fetchActivityFailed(message) {
 
 export function fetchActivity() {
   return (dispatch) => {
-    return getActivity().then((activity) => {
-      dispatch(setActivity(activity))
-    }).catch((e) => {
-      dispatch(fetchActivityFailed(e.message || 'Server Error'))
-    })
+    return getActivity()
+      .then((activity) => {
+        dispatch(setActivity(activity))
+      })
+      .catch((e) => {
+        dispatch(fetchActivityFailed(e.message || 'Server Error'))
+      })
   }
 }
