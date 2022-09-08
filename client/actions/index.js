@@ -1,18 +1,37 @@
-import { getFruits } from '../apis/fruits'
+// import { get } from '../apis/fruits'
 
-export const SET_FRUITS = 'SET_FRUITS'
+// export const SET_FRUITS = 'SET_FRUITS'
 
-export function setFruits(fruits) {
+// export function setFruits(fruits) {
+//   return {
+//     type: SET_FRUITS,
+//     payload: fruits,
+//   }
+// }
+
+// export function fetchFruits() {
+//   return (dispatch) => {
+//     return getFruits().then((fruits) => {
+//       dispatch(setFruits(fruits))
+//     })
+//   }
+// }
+
+import { getActivity } from '../apis/activity'
+
+export const SET_ACTIVITY = 'SET_ACTIVITY'
+
+export function setActivity(activity) {
   return {
-    type: SET_FRUITS,
-    payload: fruits,
+    type: SET_ACTIVITY,
+    payload: activity,
   }
 }
 
-export function fetchFruits() {
+export function fetchActivity() {
   return (dispatch) => {
-    return getFruits().then((fruits) => {
-      dispatch(setFruits(fruits))
+    return getActivity.then((activity) => {
+      dispatch(setActivity(activity))
     })
   }
 }
