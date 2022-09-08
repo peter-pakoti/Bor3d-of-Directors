@@ -1,1 +1,5 @@
-export const getTasks = () => Promise.resolve(['This', 'is', 'tasks'])
+import { getRandomTask } from '../helpers'
+
+export function getTasks() {
+  return Promise.resolve(getRandomTask())
+}

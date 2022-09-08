@@ -12,7 +12,7 @@ function Tasks() {
       <ul>
         <button onClick={() => dispatch(fetchTasks())}>Tasks</button>
         {tasks.map((task) => (
-          <li key={task}>{task}</li>
+          <li key={task.id}>{task.text}</li>
         ))}
       </ul>
     </div>

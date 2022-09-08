@@ -1,4 +1,3 @@
-// const initialState = ['It', 'Is', 'Working']
 import {
   RECEIVE_TASKS,
   ADD_TASK,
