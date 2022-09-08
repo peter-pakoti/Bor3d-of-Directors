@@ -10,7 +10,9 @@ function ShowActivity() {
 
   return (
     <div>
-      <button onClick={() => dispatch(fetchActivity())}>Click Me</button>
+      <button className="button" onClick={() => dispatch(fetchActivity())}>
+        Click Me
+      </button>
       {activity && <p>{activity.activity}</p>}
     </div>
   )
