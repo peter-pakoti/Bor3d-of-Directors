@@ -11,7 +11,7 @@ function ShowActivity() {
   return (
     <div>
       <button onClick={() => dispatch(fetchActivity())}>Click Me</button>
-      {activity ? <p>{activity.activity}</p> }
+      {activity && <p>{activity.activity}</p>}
     </div>
   )
 }
