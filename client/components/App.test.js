@@ -1,23 +1,23 @@
-// import React from 'react'
-// import { Provider } from 'react-redux'
-// import { screen, render } from '@testing-library/react'
+import React from 'react'
+import { Provider } from 'react-redux'
+import { screen, render } from '@testing-library/react'
 
-// import App from './App'
-// import store from '../store'
-// import { fetchFruits } from '../actions'
+import App from './App'
+import store from '../store'
+import { fetchTasks } from '../actions'
 
-// jest.mock('../actions')
+jest.mock('../actions')
 
-// fetchFruits.mockImplementation(() => () => {})
+// fetchTasks.mockImplementation(() => () => {})
 
-// test('page header includes fruit', () => {
+// test('page header includes BOR3D', () => {
 //   render(
 //     <Provider store={store}>
 //       <App />
 //     </Provider>
 //   )
-//   const heading = screen.getByRole('heading')
-//   expect(heading.innerHTML).toMatch(/Fruit/)
+//   const heading = screen.getAllByRole('heading')
+//   expect(heading[0]).toHaveTextContent('Bor3d')
 // })
 
 // test('renders an <li> for each fruit', () => {
