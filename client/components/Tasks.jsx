@@ -8,9 +8,11 @@ function Tasks() {
 
   return (
     <div>
-      <h1>Tasks</h1>
+      <h1 className="tasks">Tasks</h1>
       <ul>
-        <button onClick={() => dispatch(fetchTasks())}>Tasks</button>
+        <button className="button" onClick={() => dispatch(fetchTasks())}>
+          Tasks
+        </button>
         {tasks.map((task) => (
           <li key={task.id}>{task.text}</li>
         ))}
