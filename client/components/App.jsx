@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <div className="app">
-        <h3 className="activity">Activity</h3>
+        <h3 className="activity">I'm Bor3d asf</h3>
 
         <ShowActivity />
         <Tasks />
