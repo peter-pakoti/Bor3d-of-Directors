@@ -28,26 +28,26 @@ function Tasks() {
   return (
     <div>
       <h1 className="tasks">Tasks</h1>
-      <ul>
-        <button className="button" onClick={() => dispatch(fetchTasks())}>
-          Tasks
-        </button>
-        {tasks.map((task) => (
-          <li key={task.id}>
-            {task.text}
-            <button onClick={() => dispatch(deleteOldTask(task.id))}>
-              Delete
-            </button>
-            <input
-              onChange={(evt) => {
-                const text = evt.target.value
-                dispatch(updateOldTask({ text, id: task.id }))
-              }}
-              value={newTask.text}
-            />
-          </li>
-        ))}
-      </ul>
+      {/* <ul> */}
+      <button className="button" onClick={() => dispatch(fetchTasks())}>
+        Tasks
+      </button>
+      {tasks.map((task) => (
+        <li key={task.id}>
+          {task.text}
+          <button onClick={() => dispatch(deleteOldTask(task.id))}>
+            Delete
+          </button>
+          <input
+            onChange={(evt) => {
+              const text = evt.target.value
+              dispatch(updateOldTask({ text, id: task.id }))
+            }}
+            value={newTask.text}
+          />
+        </li>
+      ))}
+      {/* </ul> */}
       <form onSubmit={onSubmit}>
         <input onChange={handleChange} value={newTask} />
         <button type="submit">Submit</button>
