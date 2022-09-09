@@ -1,6 +1,11 @@
 import React, { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { fetchTasks, addNewTask, deleteOldTask } from '../actions/tasks'
+import {
+  fetchTasks,
+  addNewTask,
+  deleteOldTask,
+  updateOldTask,
+} from '../actions/tasks'
 
 function Tasks() {
   const tasks = useSelector((state) => state.tasks)
@@ -20,12 +25,6 @@ function Tasks() {
     setNewTask(e.target.value)
   }
 
-  // function deleteTask(e) {
-  //   e.preventDefault()
-  //   const action = deleteOldTask(task)
-  //   dispatch(action)
-  // }
-
   return (
     <div>
       <h1>Tasks</h1>
@@ -37,6 +36,13 @@ function Tasks() {
             <button onClick={() => dispatch(deleteOldTask(task.id))}>
               Delete
             </button>
+            <input
+              onChange={(evt) => {
+                const text = evt.target.value
+                dispatch(updateOldTask({ text, id: task.id }))
+              }}
+              value={newTask.text}
+            />
           </li>
         ))}
       </ul>

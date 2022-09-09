@@ -35,9 +35,7 @@ export function deleteOldTask(task) {
 export function updateOldTask(newTask) {
   return {
     type: 'UPDATE_TASK',
-    payload: {
-      newTask,
-    },
+    payload: newTask,
   }
 }
 

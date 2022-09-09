@@ -18,8 +18,8 @@ const reducer = (state = initialState, action) => {
       return state.filter((task) => task.id !== payload)
     case UPDATE_TASK:
       return state.map((task) => {
-        if (task === payload.oldTask) {
-          return payload.newTask
+        if (task.id === payload.id) {
+          return payload
         }
         return task
       })
