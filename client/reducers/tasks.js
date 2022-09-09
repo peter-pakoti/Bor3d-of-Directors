@@ -13,13 +13,13 @@ const reducer = (state = initialState, action) => {
     case RECEIVE_TASKS:
       return payload
     case ADD_TASK:
-      return { ...state, payload }
+      return [...state, payload]
     case DEL_TASK:
-      return state.filter((task) => task !== payload)
+      return state.filter((task) => task.id !== payload)
     case UPDATE_TASK:
       return state.map((task) => {
-        if (task === payload.oldTask) {
-          return payload.newTask
+        if (task.id === payload.id) {
+          return payload
         }
         return task
       })
