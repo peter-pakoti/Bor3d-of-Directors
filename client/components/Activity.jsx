@@ -11,9 +11,14 @@ function ShowActivity() {
   return (
     <div>
       <button className="button" onClick={() => dispatch(fetchActivity())}>
-        Click Me
+        Give Me Something To Do!
       </button>
-      {activity && <p>{activity.activity}</p>}
+      {activity && (
+        <div>
+          <p>{activity.activity}</p>{' '}
+          <p>The type of this activity is {activity.type} based</p>
+        </div>
+      )}
     </div>
   )
 }

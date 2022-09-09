@@ -27,16 +27,16 @@ function Tasks() {
 
   return (
     <div>
-      <h1 className="tasks">Tasks</h1>
+      <h1 className="tasks">How can I complete this?</h1>
       <ul>
         <button className="button" onClick={() => dispatch(fetchTasks())}>
-          Tasks
+          Here's how!
         </button>
         {tasks.map((task) => (
           <li key={task.id}>
             {task.text}
             <button onClick={() => dispatch(deleteOldTask(task.id))}>
-              Delete
+              Completed
             </button>
             <input
               onChange={(evt) => {
@@ -49,6 +49,7 @@ function Tasks() {
         ))}
       </ul>
       <form onSubmit={onSubmit}>
+        <h3>Add a new task</h3>
         <input onChange={handleChange} value={newTask} />
         <button type="submit">Submit</button>
       </form>
