@@ -48,6 +48,7 @@ function Tasks() {
           </li>
         ))}
       </ul>
+
       <form onSubmit={onSubmit}>
         <h3>Add a new task</h3>
         <input onChange={handleChange} value={newTask} />
