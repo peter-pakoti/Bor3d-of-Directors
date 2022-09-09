@@ -1,3 +1,40 @@
-/* .body {
-  color: blue;
-} */
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: black;
+  text-shadow: gray;
+  color: antiquewhite;
+  padding: 25px;
+}
+
+body {
+  background-color: #FECD70;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.title {
+  color: #483838;
+  font-size: 4rem;
+}
+
+.activity {
+  color: white;
+  font-size: 2rem; 
+}
+
+.tasks {
+  color: white;
+  font-size: 2rem; 
+}
+
+.button {
+  font-size: 1.5rem;
+  border: 2px solid #645CAA; 
+  padding: 0.25rem 1rem;
+  background-color: bisque;
+  border-radius: 25px;
+}
